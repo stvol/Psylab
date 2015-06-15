@@ -54,7 +54,14 @@ fprintf(fidm,'#### %s %s %s__%s npar %d ####\n', ...
 	M.EXPNAME, M.SNAME, datestr(now,1), datestr(now,13), M.NUM_PARAMS);
 for k=1:M.NUM_PARAMS,
   fprintf(fidm,'%%%%----- PAR%d: %s %f %s\n', k, char(M.PARAMNAME(k)), M.PARAM(k), char(M.PARAMUNIT(k)));
-end  
+end
+
+fprintf(fidm, '%%%%----- VAL:');
+for k = 1:length(M.ANSWERS)
+    fprintf(fdim, ' %s %s',M.VAR(k), M.ANSWER(k));
+end
+fprintf(fdim, '\n');
+
 if (isfield(M, 'SAVEMEAN')) && M.SAVEMEAN == 1
     fprintf(fidm,'  %s %f %f %f %f %s\n', ...
         M.VARNAME, M.mean_thres, M.std_thres, M.min_thres, M.max_thres, M.VARUNIT);

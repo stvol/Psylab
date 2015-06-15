@@ -99,9 +99,22 @@ while 1,
       
 	% get next line in the file
 	lin = fgets(fid1);   line_number = line_number+1;
+    
 	% split into space-separated words
 	tok = mpsy_split_lines_to_toks(lin);
-	
+    
+    if strcmp(tok(2), 'VAL:')
+        x.plot(trial).vars = cell(tok(3:2:end));
+        x.plot(trial).answers = cell(tok(4:2:end));
+        
+        % get next line in the file
+        lin = fgets(fid1);   line_number = line_number+1;
+    
+        % split into space-separated words
+        tok = mpsy_split_lines_to_toks(lin);
+    end
+    
+    
 	if length(tok) == 6,
 	  x.varname(trial)    = tok(1);
 	  x.threshold(trial)  = str2num(char(tok(2)));  % the threshold itself

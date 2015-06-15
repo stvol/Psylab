@@ -58,9 +58,9 @@ end
 
 fprintf(fidm, '%%%%----- VAL:');
 for k = 1:length(M.ANSWERS)
-    fprintf(fdim, ' %s %s',M.VAR(k), M.ANSWER(k));
+    fprintf(fidm, ' %d %d',M.VARS(k), M.ANSWERS(k));
 end
-fprintf(fdim, '\n');
+fprintf(fidm, '\n');
 
 if (isfield(M, 'SAVEMEAN')) && M.SAVEMEAN == 1
     fprintf(fidm,'  %s %f %f %f %f %s\n', ...

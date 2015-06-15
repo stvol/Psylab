@@ -27,6 +27,11 @@ function h = mpsy_replot(filename, exp_name, run_idx)
 x = read_psydat(filename, exp_name);
 %x = x(run_idx);
 
+if ~isfield(x, 'plot') || isempty(x.plot(run_idx).vars)
+    fprintf('There is no progress data for this run.\n');
+    return
+end
+
 figure(111);
 idx_plus  = find(str2double(x.plot(run_idx).answers) ==1);  % correct answers
 idx_minus = find(str2double(x.plot(run_idx).answers) ==0);  % wrong answers

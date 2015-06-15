@@ -112,6 +112,9 @@ while 1,
     
         % split into space-separated words
         tok = mpsy_split_lines_to_toks(lin);
+    else
+       x.plot(trial).vars = [];
+       x.plot(trial).answers = [];
     end
     
     

@@ -19,10 +19,11 @@ function [x,y] = read_psydat(s_name, exp_name)
 %      y   same data as x, but numeric data only, and in matrix format
 %
 % Copyright (C) 2006   Martin Hansen, FH OOW  
-% Author :  Martin Hansen,  <psylab AT jade-hs.de>
+% Author :  Martin Hansen, Stephanus Volke <psylab AT jade-hs.de>
 % Date   :  10 Sep 2003
 % Updated:  <23 Okt 2006 00:10, hansen>
 % Updated:  <14 Jan 2004 11:30, hansen>
+% Updated:  <15 Jun 2015 23:40, volke>
 
 %% This file is part of PSYLAB, a collection of scripts for
 %% designing and controlling interactive psychoacoustical listening

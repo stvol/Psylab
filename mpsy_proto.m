@@ -17,6 +17,8 @@
 % Updated:  <13 Nov 2007 Sven Franz>
 %           added var "M.SAVEMEAN". When M.SAVEMEAN==1 the mean (not
 %           median) will be saved
+% Updated:  <15 Jun 2015 sv>
+%           added new entry "VAR" which saves the progress of each run
 
 %% This file is part of PSYLAB, a collection of scripts for
 %% designing and controlling interactive psychoacoustical listening
